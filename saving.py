@@ -7,7 +7,7 @@ url1 = "http://192.168.1.232/output.txt"
 with open("saved_dataT.txt","w") as file1:
 	with open("saved_dataH.txt","w") as file2:
 		with open("saved_time.txt","w") as file3:
-			for i in range (30):
+			for i in range (24):
 				r1 = requests.get(url1)
 				r2 = re.findall(r"(\d+\.\d+)",r1.text)
 				today = date.today()
@@ -20,4 +20,4 @@ with open("saved_dataT.txt","w") as file1:
 				file1.write(",")
 				file2.write(",")
 				file3.write(",")
-				time.sleep(15)
+				time.sleep(3600)
