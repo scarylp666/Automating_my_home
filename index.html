@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,3 +82,108 @@ setInterval(GetClock,1000);
 <div id="demo">
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	#image {
+		display: none;
+	}
+	.button {
+		background-color: #666; /* Green */
+  		border: none;
+  		color: white;
+  		padding: 5px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+  		font-size: 16px;
+		border-radius: 8px;
+  		margin: 4px 2px;
+		cursor: pointer;
+	}
+	.button:hover{
+		background-color: red;
+	}
+	.div {
+		display: inline-block;
+	}
+</style>
+<title>Weather Website</title>
+</head>
+<body>
+<h2>This is my project about weather</h2>
+<p>It is in development stage</p>
+<p>This is just a test component</p>
+<div id="clockbox"></div>
+
+<script type="text/javascript">
+var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function GetClock(){
+var d=new Date();
+var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+var clocktext=""+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+document.getElementById('clockbox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
+<div class="div">
+<!-- <button type="button" onclick="loadDoc()" class="button">Request data</button> -->
+<!-- <button type="button" class="button" onclick="zal()" id="zaluziabutton">
+        Otvorit Zaluzie
+        <script>
+            function zal(){
+                const xhttp = new XMLHttpRequest();
+                var elem = document.getElementById("zaluziabutton");
+                if (elem.innerHTML=="Zatvorit Zaluzie") {
+                    xhttp.open("GET", "http://192.168.1.246/?value=200");
+                    elem.innerHTML = "Otvorit Zaluzie";
+                }
+                else {
+                    elem.innerHTML = "Zatvorit Zaluzie";
+                    xhttp.open("GET", "http://192.168.1.246/?value=0");
+                }
+                xhttp.send();
+            }
+        </script>
+    </button> -->
+<img id = "image" src = "test.png">
+<script>
+  setInterval(function () {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "output.txt");
+  xhttp.send();
+}, 1000);
+</script>
+    <button type="button" class="button"  onclick="show()" id="btnID">
+        Show Image
+    </button>
+    <script>
+        function show() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID')
+                    .style.display = "none";
+        }
+    </script>
+</div>
+<div id="demo">
+</body>
+</html>
+>>>>>>> a08940b9792542cb478ffc83083541bfb1cf6c64
