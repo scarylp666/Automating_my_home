@@ -61,3 +61,21 @@ body {
   stroke-width: 2;
   margin: 20px 20px;
 }
+.clock {
+  background-color: #1a3b70;
+  color: #dedede;
+  border: #dedede;
+  padding: 10px;
+  border-radius: 9px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  position: fixed;
+  right: 939px;
+  top: 120px;
+}
+.clockboxx {
+  width: 65px;
+  height: 65px;
+  fill: #b5a122;
+}
