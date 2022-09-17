@@ -58,5 +58,5 @@ def tabulka10():
 
 zapisovanie()
 print("zapisovanie prebehlo uspesne")
-tabulka()
+tabulka10()
 print("tabulka vytvorena uspesne i hopegmfjdhgihj")

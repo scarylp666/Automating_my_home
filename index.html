@@ -1,36 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-	#image {
-		display: none;
-	}
-	.button {
-		background-color: #666; /* Green */
-  		border: none;
-  		color: white;
-  		padding: 5px;
-  		text-align: center;
-  		text-decoration: none;
-  		display: inline-block;
-  		font-size: 16px;
-		border-radius: 8px;
-  		margin: 4px 2px;
-		cursor: pointer;
-	}
-	.button:hover{
-		background-color: red;
-	}
-	.div {
-		display: inline-block;
-	}
-</style>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 <title>Weather Website</title>
 </head>
 <body>
 <h2>This is my project about weather</h2>
-<p>It is in development stage</p>
-<p>This is just a test component</p>
+<!-- <p class="maintext">It is in development stage</p> -->
+<!-- <p class="maintext1">This is just a test component</p> -->
 <div id="clockbox"></div>
 
 <script type="text/javascript">
@@ -52,8 +29,8 @@ GetClock();
 setInterval(GetClock,1000);
 </script>
 <div class="div">
-<button type="button" onclick="loadDoc()" class="button">Request data</button>
-<button type="button" class="button" onclick="zal()" id="zaluziabutton">
+<!-- <button type="button" onclick="loadDoc()" class="button">Request data</button> -->
+<!-- <button type="button" class="button" onclick="zal()" id="zaluziabutton">
         Otvorit Zaluzie
         <script>
             function zal(){
@@ -70,17 +47,20 @@ setInterval(GetClock,1000);
                 xhttp.send();
             }
         </script>
-    </button>
+    </button> -->
 <img id = "image" src = "test.png">
+<svg class="temp"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2a2 2 0 0 0-2 2v10.5a4 4 0 1 0 4 0V4a2 2 0 0 0-2-2z"></path>
+  </svg>
 <script>
-function loadDoc() {
+  setInterval(function () {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     document.getElementById("demo").innerHTML = this.responseText;
   }
   xhttp.open("GET", "output.txt");
   xhttp.send();
-}
+}, 1000);
 </script>
     <button type="button" class="button"  onclick="show()" id="btnID">
         Show Image
