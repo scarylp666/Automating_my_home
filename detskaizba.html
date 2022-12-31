@@ -29,7 +29,76 @@
 			</div>
 		</div>
 		<div class="center">
-			<button class="material-icons-outlined">lightbulb</button>
+			<input type="checkbox" id="menubutton" />
+			<label class="material-icons-outlined" for="menubutton">lightbulb</label>
+			<div class="menu">
+				<p class="textos">Room Light</p>
+				<div>
+					<p class="text2">Farba :</p>
+					<input type="color" class="colorpicker" />
+				</div>
+				<div>
+					<input type="checkbox" id="menueff1" />
+					<label class="material-icons-outlined" for="menueff1">flare</label>
+					<p class="text2">Effects 1</p>
+					<div class="menu1">
+						<button class="fancier">effect1</button>
+						<button class="fancier">effect2</button>
+					</div>
+				</div>
+				<div>
+					<input type="checkbox" id="menueff2" />
+					<label class="material-icons-outlined" for="menueff2">flare</label>
+					<p class="text2">Effects 2</p>
+					<div class="menu2">
+						<button class="fancier">effect1</button>
+						<button class="fancier">effect2</button>
+					</div>
+				</div>
+				<div>
+					<input type="checkbox" id="menueff3" />
+					<label class="material-icons-outlined" for="menueff3">flare</label>
+					<p class="text2">Effects 3</p>
+					<div class="menu3">
+						<button class="fancier">effect1</button>
+						<button class="fancier">effect2</button>
+					</div>
+				</div>
+				<div>
+					<input type="checkbox" id="menueff4" />
+					<label class="material-icons-outlined" for="menueff4">flare</label>
+					<p class="text2">Effects 4</p>
+					<div class="menu4">
+						<button class="fancier">effect1</button>
+						<button class="fancier">effect2</button>
+					</div>
+				</div>
+			</div>
 		</div>
+		<div>
+			<script
+				type="text/javascript"
+				src="detskaizba/js/updateslight.js"></script>
+			<span>svietivost je :</span>
+			<span id="brightness"></span>
+		</div>
+		<div>
+			<span>cervena hodnota :</span>
+			<span id="red"></span>
+		</div>
+		<div>
+			<span>zelena hodnota :</span>
+			<span id="green"></span>
+		</div>
+		<div>
+			<span>modra hodnota :</span>
+			<span id="blue"></span>
+		</div>
+		<div>
+			<span>nocny casovac je </span>
+			<span id="timer"></span>
+		</div>
+		<script type="text/javascript" src="detskaizba/js/updateslight.js"></script>
+		<span id="toparse"></span>
 	</body>
 </html>
